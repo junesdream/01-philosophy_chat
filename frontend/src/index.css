@@ -27,6 +27,24 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Header: title + clear button side by side */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Clear button: smaller + muted so it doesn't compete with EXECUTE */
+.clear-btn {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    opacity: 0.5;
+}
+
+.clear-btn:hover {
+    opacity: 1;
+}
+
 .matrix-text {
     color: var(--accent-green);
     text-shadow: 0 0 5px var(--accent-green);

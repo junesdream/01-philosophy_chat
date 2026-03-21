@@ -1,21 +1,32 @@
 // src/api.ts
-// Use explicit IP to avoid DNS/localhost resolution issues
-const API_URL = 'http://127.0.0.1:8080/api/chat';
+// Direct Gemini API call — no backend server needed
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 export interface ChatResponse {
     text: string;
 }
 
 export const sendMessage = async (message: string, philosopher: string): Promise<ChatResponse> => {
-    const response = await fetch(API_URL, {
+    const response = await fetch(GEMINI_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message, philosopher }),
+        body: JSON.stringify({
+            contents: [{
+                parts: [{
+                    text: `Du bist ${philosopher}, der berühmte Philosoph. 
+                           Antworte NUR in seinem typischen Stil, seiner Sprache und seinen Kernthesen. Beziehe dich auf seine echten Werke. Frage: ${message}`
+                }]
+            }]
+        }),
     });
 
     if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Gemini API error');
     }
 
-    return response.json();
+    const data = await response.json();
+    return {
+        text: data.candidates[0].content.parts[0].text
+    };
 };

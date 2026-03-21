@@ -67,16 +67,24 @@ Frontend (from root):
 
 As a developer with a background in Musicology, I'm fascinated by the structures of logic and harmony. This project explores the intersection of human thought and machine intelligence — treating the prompt as a musical score that the LLM must perform within strict parameters.
 
-## 📝 License
-
-MIT
 
 ## 🤝 Contributing
 
 Contributions are welcome! If you'd like to improve DIALECTIC.OS, feel free to open an issue or submit a pull request.
+
+## 📝 License
+
+MIT
+
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/your-idea`)
 3. Commit your changes (`git commit -m 'feat: add your idea'`)
 4. Push to the branch (`git push origin feature/your-idea`)
 5. Open a Pull Request
+
+### 🛡️ Robust Error Handling & Mock System
+To ensure a seamless user experience even when external services are unavailable, this application features a dual-layer response system:
+- **Live Mode:** Connects directly to the Google Gemini 2.0 Flash API for dynamic, AI-generated philosophical discourse.
+- **Smart Fallback (Mock Mode):** If the API reaches its rate limit (Error 429) or is offline, the system automatically switches to a high-quality local database (`mockData.ts`).
+- **Benefit:** The UI never breaks, and the "Dialectic" flow remains consistent for the user at all times.
