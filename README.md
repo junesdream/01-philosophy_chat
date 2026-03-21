@@ -44,10 +44,9 @@ Backend:
 
 3. **Configure environment variables**
 
-   Create a `.env` file in the `server/` directory:
+   Create a `.env` file in the `frontend` directory:
 ```env
    GEMINI_API_KEY=your_api_key_here
-   PORT=8080
 ```
 
 4. **Run the application**
