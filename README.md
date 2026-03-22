@@ -71,16 +71,15 @@ As a developer with a background in Musicology, I'm fascinated by the structures
 
 Contributions are welcome! If you'd like to improve DIALECTIC.OS, feel free to open an issue or submit a pull request.
 
-## 📝 License
-
-MIT
-
-
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/your-idea`)
 3. Commit your changes (`git commit -m 'feat: add your idea'`)
 4. Push to the branch (`git push origin feature/your-idea`)
 5. Open a Pull Request
+
+## 📝 License
+
+MIT
 
 ### 🛡️ Robust Error Handling & Mock System
 To ensure a seamless user experience even when external services are unavailable, this application features a dual-layer response system:
