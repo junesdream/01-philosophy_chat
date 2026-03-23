@@ -33,3 +33,6 @@ jobs:
 
       - name: 🏗️ Build Project
         run: npm run build
+
+      - name: 🔍 Lint Code
+        run: npm run lint

@@ -1,10 +1,13 @@
 # DIALECTIC.OS v1.0 🤖🏛️
-
 A specialized AI chat interface for philosophical synthesis with history's greatest minds. Built as a technical demonstration of a React/Node.js stack integrated with Large Language Models.
 
 ## 🌟 Overview
 
 DIALECTIC.OS is not just a chatbot — it's a **Dialectic Engine**. It forces the AI to adopt specific philosophical frameworks (Hegelian Dialectics, Kantian Pure Reason, Nietzschean Aphorisms) to process user concepts through a rigorous intellectual lens.
+
+![CI Status](https://github.com/junesdream/01-philosophy_chat/actions/workflows/main.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-green)
+![React](https://img.shields.io/badge/React-19-blue)
 
 ## 🛠️ Tech Stack
 
@@ -13,6 +16,9 @@ DIALECTIC.OS is not just a chatbot — it's a **Dialectic Engine**. It forces th
 - **AI Integration:** Google Gemini API (REST)
 - **Styling:** Custom CSS (Matrix/Cyberpunk aesthetic)
 - **State Management:** React Hooks
+- **CI/CD:** GitHub Actions (Automated Testing & Linting)
+- **Container:** Docker (Multi-stage Build)
+- **Deployment:** Vercel (Automatic CD)
 
 ## 🚀 Features
 
