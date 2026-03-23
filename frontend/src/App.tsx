@@ -58,8 +58,9 @@ const App: React.FC = () => {
                 content: response.text,
                 philosopherKey: currentPhilosopher // locked to snapshot
             }]);
-        } catch (error: any) {
-            console.warn("API Offline - Switching to Mock Mode", error);
+        } catch (error: unknown) {
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            console.warn("API Error - Switching to Mock Mode", errorMessage);
 
             const mockReply = PHILOSOPHY_MOCKS[currentPhilosopher] ?? PHILOSOPHY_MOCKS["Default"];
 
